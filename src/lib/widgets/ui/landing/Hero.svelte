@@ -48,7 +48,7 @@
 			</li>
 		</ul>
 	</nav>
-	<div>
+	<div class="">
 		<article>
 			<ul class="panels">
 				{#each panels as panel}
@@ -65,7 +65,7 @@
 				{/each}
 			</ul>
 
-			<h1>
+			<h2>
 				<span class="gradient-text letter">E</span>
 				<span class="gradient-text letter">X</span>
 				<span class="gradient-text letter">P</span>
@@ -73,7 +73,7 @@
 				<span class="gradient-text letter">O</span>
 				<span class="gradient-text letter">R</span>
 				<span class="gradient-text letter">E</span>
-			</h1>
+			</h2>
 
 			<span class="geo-square">
 				<img src="/images/gifs/your_welcome.gif" alt="image of graffity, graphic purpose only" />
@@ -98,16 +98,17 @@
 		--icon-dimensions: 3rem;
 		--full-w: 100%;
 		--full-h: 100%;
-		--marvin: 'Marvin Visions Variable';
-		--h1-clamp: clamp(10.5rem, 15vw, 30rem);
+		--h2-clamp: clamp(10.5rem, 15vw, 30rem);
 		--default-font-size: 1.8rem;
 		--default-heading-size: 4.5rem;
-		--duration: 0.5s;
+		--duration: 0.2s;
 		--short-duration: 350ms;
 		--gap: 0.4rem;
 		--default-padding: 1.2rem;
 		--z-20: 20;
 		--z-30: 30;
+		--letter-animation: 5s;
+		--step-letter-animation: 0.35s;
 	}
 
 	::-moz-selection {
@@ -147,11 +148,11 @@
 		background-image: linear-gradient(to bottom, var(--yellow), var(--light-yellow));
 	}
 
-	h1 {
+	h2 {
 		align-self: flex-end;
 		display: inline-flex;
 		flex-flow: row;
-		font-size: var(--h1-clamp);
+		font-size: var(--h2-clamp);
 		line-height: 0.75;
 		margin: 0 auto 6rem auto;
 		position: relative;
@@ -183,7 +184,6 @@
 		flex-flow: row nowrap;
 		grid-row: 1;
 		padding: var(--default-padding);
-		/* width: var(--full-w); */
 	}
 	nav ul {
 		display: flex;
@@ -384,38 +384,45 @@
 	}
 
 	.letter:nth-child(1) {
-		-webkit-animation-delay: 2.6s;
-		animation-delay: 2.6s;
+		/* 2.6s */
+		-webkit-animation-delay: 4.95s;
+		animation-delay: 4.95s;
 	}
 
 	.letter:nth-child(2) {
-		-webkit-animation-delay: 2.95s;
-		animation-delay: 2.95s;
+		/* 2.95s */
+		-webkit-animation-delay: 5.3s;
+		animation-delay: 5.3s;
 	}
 
 	.letter:nth-child(3) {
-		-webkit-animation-delay: 3.3s;
-		animation-delay: 3.3s;
+		/* 3.3s */
+		-webkit-animation-delay: 5.65s;
+		animation-delay: 5.65s;
 	}
 
 	.letter:nth-child(4) {
-		-webkit-animation-delay: 3.65s;
-		animation-delay: 3.65s;
+		/* 3.65s */
+		-webkit-animation-delay: 6s;
+		animation-delay: 6s;
 	}
 
 	.letter:nth-child(5) {
-		-webkit-animation-delay: 4s;
-		animation-delay: 4s;
+		/* 4s */
+		-webkit-animation-delay: 6.35s;
+		animation-delay: 6.35s;
 	}
 
 	.letter:nth-child(6) {
-		-webkit-animation-delay: 4.35s;
-		animation-delay: 4.35s;
+		/* 4.35s */
+		-webkit-animation-delay: 6.7s;
+		animation-delay: 6.7s;
 	}
 
 	.letter:nth-child(7) {
-		-webkit-animation-delay: 4.7s;
-		animation-delay: 4.7s;
+		/* 4.7s */
+		-webkit-animation-delay: 7.05s;
+		animation-delay: 7.05s;
 	}
 
 	.geo-square {
@@ -466,7 +473,7 @@
 			flex: 1;
 		}
 
-		h1 {
+		h2 {
 			margin: 0 auto;
 		}
 
