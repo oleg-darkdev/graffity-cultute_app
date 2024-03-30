@@ -110,7 +110,7 @@
 
 <div class="video-container">
 	<video playsinline autoplay muted loop>
-		<source src="https://www.yudiz.com/codepen/hover-reveal/amv.mp4" type="video/mp4" />
+		<source src="/videos/big.mp4" type="video/mp4" />
 	</video>
 </div>
 
@@ -186,7 +186,7 @@
 					</a>
 				</div>
 				<div class="hover-img">
-					<img src="/images/styles/{style.example}" alt={style.title} class="img-fluid" />
+					<img src="/images/styles/{style.example}" alt='Example of a {style.title} style graffiti' class="img-fluid" />
 				</div>
 			</li>
 		{/each}
@@ -324,7 +324,8 @@
 		pointer-events: none;
 		position: absolute;
 		z-index: -1;
-		top: 50%;
+		/* top: 50%; */
+		top: 30%;
 		left: 0%;
 		width: 50vw;
 		/** 34vw; */
@@ -340,7 +341,7 @@
 		border-radius: 16px;
 	}
 	.graffity-list li:hover .hover-img img {
-		opacity: 1;
+		opacity: 0.7;
 	}
 
 	.spray {
