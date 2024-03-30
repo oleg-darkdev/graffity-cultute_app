@@ -16,7 +16,7 @@
 			<img
 				class=""
 				style="max-width: 600px;"
-				src="/images/extensions/svg/{extension.img}"
+				src="/images/extensions/{extension.img}"
 				alt="{extension.title} extension"
 			/>
 		</div>
