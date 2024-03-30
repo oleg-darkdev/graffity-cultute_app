@@ -263,7 +263,7 @@ const styles = [
 	},
 	{
 		title: 'Sticker bombing',
-		example: 'sticker',
+		example: 'sticker-bobing.jpg',
 		articleLink: '/',
 		shortDesc: [
 			'Sticker bombing is a common type of graffiti where artists either write on blank stickers or print names and images on stickers and stick them up in public.'
