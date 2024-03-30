@@ -4,7 +4,7 @@ const artistExtensionData = [
 		country: 'Albany',
 		price: '30',
 		img: 'albany.png',
-		cardsInclude: 40,
+		artists: [{nickName: 'lorem1', link: '/'},{nickName: 'lorem2', link: '/'}, {nickName: 'lorem3', link: '/'},{nickName: 'lorem4', link: '/'},{nickName: 'lorem5', link: '/'},{nickName: 'lorem6', link: '/'},{nickName: 'lorem7', link: '/'}, ], del: '',
 		desc: [
 			{
 				title: 'Artists',
@@ -17,7 +17,7 @@ const artistExtensionData = [
 		country: 'Austria',
 		price: '30',
 		img: 'austria.png',
-		cardsInclude: 40,
+		artists: [{nickName: 'lorem1', link: '/'},{nickName: 'lorem2', link: '/'}, {nickName: 'lorem3', link: '/'},{nickName: 'lorem4', link: '/'},{nickName: 'lorem5', link: '/'},{nickName: 'lorem6', link: '/'},{nickName: 'lorem7', link: '/'}, ], del: '',
 		desc: [
 			{
 				title: 'Artists',
@@ -30,7 +30,7 @@ const artistExtensionData = [
 		country: 'Ukraine',
 		price: '30',
 		img: 'ukraine.png',
-		cardsInclude: 40,
+		artists: [{nickName: 'lorem1', link: '/'},{nickName: 'lorem2', link: '/'}, {nickName: 'lorem3', link: '/'},{nickName: 'lorem4', link: '/'},{nickName: 'lorem5', link: '/'},{nickName: 'lorem6', link: '/'},{nickName: 'lorem7', link: '/'}, ], del: '',
 		desc: [
 			{
 				title: 'Artists',
@@ -43,7 +43,7 @@ const artistExtensionData = [
 		country: 'Russia',
 		price: '30',
 		img: 'russia.png',
-		cardsInclude: 40,
+		artists: [{nickName: 'lorem1', link: '/'},{nickName: 'lorem2', link: '/'}, {nickName: 'lorem3', link: '/'},{nickName: 'lorem4', link: '/'},{nickName: 'lorem5', link: '/'},{nickName: 'lorem6', link: '/'},{nickName: 'lorem7', link: '/'}, ], del: '',
 		desc: [
 			{
 				title: 'Artists',
@@ -56,7 +56,7 @@ const artistExtensionData = [
 		country: 'Turkey',
 		price: '30',
 		img: 'turkey.png',
-		cardsInclude: 40,
+		artists: [{nickName: 'lorem1', link: '/'},{nickName: 'lorem2', link: '/'}, {nickName: 'lorem3', link: '/'},{nickName: 'lorem4', link: '/'},{nickName: 'lorem5', link: '/'},{nickName: 'lorem6', link: '/'},{nickName: 'lorem7', link: '/'}, ], del: '',
 		desc: [
 			{
 				title: 'Artists',
@@ -69,7 +69,7 @@ const artistExtensionData = [
 		country: 'Sweden',
 		price: '30',
 		img: 'sweden.png',
-		cardsInclude: 40,
+		artists: [{nickName: 'lorem1', link: '/'},{nickName: 'lorem2', link: '/'}, {nickName: 'lorem3', link: '/'},{nickName: 'lorem4', link: '/'},{nickName: 'lorem5', link: '/'},{nickName: 'lorem6', link: '/'},{nickName: 'lorem7', link: '/'}, ], del: '',
 		desc: [
 			{
 				title: 'Artists',
@@ -82,7 +82,7 @@ const artistExtensionData = [
 		country: 'Spain',
 		price: '30',
 		img: 'spain.png',
-		cardsInclude: 40,
+		artists: [{nickName: 'lorem1', link: '/'},{nickName: 'lorem2', link: '/'}, {nickName: 'lorem3', link: '/'},{nickName: 'lorem4', link: '/'},{nickName: 'lorem5', link: '/'},{nickName: 'lorem6', link: '/'},{nickName: 'lorem7', link: '/'}, ], del: '',
 		desc: [
 			{
 				title: 'Artists',
@@ -95,7 +95,7 @@ const artistExtensionData = [
 		country: 'Italy',
 		price: '30',
 		img: 'italy.png',
-		cardsInclude: 40,
+		artists: [{nickName: 'lorem1', link: '/'},{nickName: 'lorem2', link: '/'}, {nickName: 'lorem3', link: '/'},{nickName: 'lorem4', link: '/'},{nickName: 'lorem5', link: '/'},{nickName: 'lorem6', link: '/'},{nickName: 'lorem7', link: '/'}, ], del: '',
 		desc: [
 			{
 				title: 'Artists',
@@ -108,7 +108,7 @@ const artistExtensionData = [
 		country: 'Germany',
 		price: '30',
 		img: 'germany.png',
-		cardsInclude: 40,
+		artists: [{nickName: 'lorem1', link: '/'},{nickName: 'lorem2', link: '/'}, {nickName: 'lorem3', link: '/'},{nickName: 'lorem4', link: '/'},{nickName: 'lorem5', link: '/'},{nickName: 'lorem6', link: '/'},{nickName: 'lorem7', link: '/'}, ], del: '',
 		desc: [
 			{
 				title: 'Artists',
@@ -121,7 +121,7 @@ const artistExtensionData = [
 		country: 'Poland',
 		price: '30',
 		img: 'poland.png',
-		cardsInclude: 40,
+		artists: [{nickName: 'lorem1', link: '/'},{nickName: 'lorem2', link: '/'}, {nickName: 'lorem3', link: '/'},{nickName: 'lorem4', link: '/'},{nickName: 'lorem5', link: '/'},{nickName: 'lorem6', link: '/'},{nickName: 'lorem7', link: '/'}, ], del: '',
 		desc: [
 			{
 				title: 'Artists',
@@ -134,7 +134,7 @@ const artistExtensionData = [
 		country: 'France',
 		price: '30',
 		img: 'france.png',
-		cardsInclude: 40,
+		artists: [{nickName: 'lorem1', link: '/'},{nickName: 'lorem2', link: '/'}, {nickName: 'lorem3', link: '/'},{nickName: 'lorem4', link: '/'},{nickName: 'lorem5', link: '/'},{nickName: 'lorem6', link: '/'},{nickName: 'lorem7', link: '/'}, ], del: '',
 		desc: [
 			{
 				title: 'Artists',
@@ -147,7 +147,7 @@ const artistExtensionData = [
 		country: 'England',
 		price: '30',
 		img: 'england.png',
-		cardsInclude: 40,
+		artists: [{nickName: 'lorem1', link: '/'},{nickName: 'lorem2', link: '/'}, {nickName: 'lorem3', link: '/'},{nickName: 'lorem4', link: '/'},{nickName: 'lorem5', link: '/'},{nickName: 'lorem6', link: '/'},{nickName: 'lorem7', link: '/'}, ], del: '',
 		desc: [
 			{
 				title: 'Artists',
@@ -160,7 +160,7 @@ const artistExtensionData = [
 		country: 'Croatia',
 		price: '30',
 		img: 'croatia.png',
-		cardsInclude: 40,
+		artists: [{nickName: 'lorem1', link: '/'},{nickName: 'lorem2', link: '/'}, {nickName: 'lorem3', link: '/'},{nickName: 'lorem4', link: '/'},{nickName: 'lorem5', link: '/'},{nickName: 'lorem6', link: '/'},{nickName: 'lorem7', link: '/'}, ], del: '',
 		desc: [
 			{
 				title: 'Artists',
@@ -173,7 +173,7 @@ const artistExtensionData = [
 		country: 'Czech',
 		price: '30',
 		img: 'czech.png',
-		cardsInclude: 40,
+		artists: [{nickName: 'lorem1', link: '/'},{nickName: 'lorem2', link: '/'}, {nickName: 'lorem3', link: '/'},{nickName: 'lorem4', link: '/'},{nickName: 'lorem5', link: '/'},{nickName: 'lorem6', link: '/'},{nickName: 'lorem7', link: '/'}, ], del: '',
 		desc: [
 			{
 				title: 'Artists',
