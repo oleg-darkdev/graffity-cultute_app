@@ -10,9 +10,13 @@
 	// });
 </script>
 
-<div class="group my-6 h-auto">
+<div
+	class="hover:delay-550 group my-6 h-auto border-2 border-neutral-900 hover:-translate-y-1 hover:scale-105 hover:border-yellow-400 hover:transition hover:duration-1000  hover:ease-in-out hover:ease-in-out"
+>
 	<div class="container  max-w-md ">
-		<div class=" imgBx w-full bg-neutral-900">
+		<div
+			class=" imgBx w-full bg-neutral-900 text-neutral-700 group-hover:bg-yellow-600 group-hover:text-black "
+		>
 			<img
 				class=""
 				style="max-width: 600px;"
@@ -21,31 +25,41 @@
 			/>
 		</div>
 		<div class="details">
-			<div class="content">
-				<h2 class="my-2 text-zinc-600 group-hover:text-neutral-100">
-					{extension.title} <br />
-					<!-- <span>Running Collection</span> -->
-				</h2>
+			<div class="content prose   pt-4">
 				<!-- <p>Quantity of cards: <span>{extension.cardsInclude}</span></p> -->
 
-				<p class="text-zinc-700 group-hover:text-neutral-300">
-					Featuring soft foam cushioning and lightweight, woven fabric in the upper, the Jordan
-					Proto-Lyte is made for all-day, bouncy comfort. Lightweight Breathability: Lightweight
-					woven fabric with real or synthetic leather provides breathable support.
+				<p class="mb-2 text-zinc-700 group-hover:text-neutral-400">
+					This extension includes cards with the art of graffiti artists from the country of <span
+						class="text-neutral-300 group-hover:text-yellow-600">{extension.country}</span
+					>.
 				</p>
 
-				<h3 class="font-dollar group-hover:">$ <span class=''>{extension.price}</span></h3>
-				<button>Buy Now</button>
+				<p class="mb-10 text-zinc-700 group-hover:text-neutral-400">
+					List of graffiti artists in this extension: <br />
+					{#each extension.artists as artist}
+						<span class="mr-1"
+							><a class="group-hover:text-yellow-600 " href={artist.link}
+								>{artist.nickName},
+							</a></span
+						>
+					{/each}
+				</p>
+
+				<h3 class="font-dollar group-hover:text-yellow-400">
+					$ <span class="group-hover:text-yellow-400">{extension.price}</span>
+				</h3>
+				<button
+					class="mb-6 bg-black  text-white hover:bg-yellow-200 group-hover:bg-yellow-400 group-hover:text-black"
+					>Buy Now</button
+				>
 			</div>
 		</div>
 	</div>
 </div>
-<style>
-	@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,800&display=swap');
 
+<style>
 	.container {
 		position: relative;
-
 		height: 400px;
 		margin: 20px;
 	}
@@ -59,13 +73,12 @@
 	.container .imgBx:before {
 		content: 'Extension';
 		/* content: attr(data-before); */
+		font-family: 'graffity';
 		position: absolute;
 		top: 0px;
-		left: 24px;
-		color: #000;
-		opacity: 0.2;
+		left: 40px;
+		/* opacity: 0.2; */
 		font-size: 5em;
-		font-weight: 800;
 	}
 
 	.container .imgBx img {
@@ -73,39 +86,33 @@
 		transform: rotate(-5deg);
 		left: -70px;
 		bottom: -20px;
-
 		transition: 0.9s linear;
 	}
 
-	.container .details h2 {
+	/* .container .details h2 {
 		padding: 0;
 		font-size: 2.4em;
 		line-height: 1em;
-	}
+	} */
 
 	.container .details h2 span {
 		font-size: 0.4em;
 		text-transform: uppercase;
 		letter-spacing: 2px;
-		color: #999;
 	}
 
 	.container .details p {
 		max-width: 85%;
-		font-size: 15px;
-		margin-bottom: 36px;
+		/* font-size: 15px; */
 	}
 
 	.container .details h3 {
 		margin: 0;
 		padding: 0;
 		font-size: 2.5em;
-		color: #a2a2a2;
 		float: left;
 	}
 	.container .details button {
-		background: #000;
-		color: #fff;
 		border: none;
 		outline: none;
 		padding: 15px 20px;

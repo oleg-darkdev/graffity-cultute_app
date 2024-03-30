@@ -34,7 +34,7 @@
 				if (e.pageX < oldx && e.clientX <= lastCursorX - cursorThreshold) {
 					direction = 'left';
 					lastCursorX = e.clientX;
-					innerImage.style.transform = 'rotate(-15deg)';
+					innerImage.style.transform = 'rotate(-5deg)';
 				} else if (e.pageX > oldx && e.clientX >= lastCursorX + cursorThreshold) {
 					direction = 'right';
 					lastCursorX = e.clientX;
@@ -116,21 +116,21 @@
 
 <!-- https://graffstorm.com/graffiti-styles -->
 <div class="graffity-list">
-	<h2 class="font-graffity title lg:text-6xl max-w-xl">Types of Graffiti That Define the Art</h2>
+	<h2 class="font-graffity title max-w-xl lg:text-6xl">Types of Graffiti That Define the Art</h2>
 	<ul>
 		<li>
 			<div class="index">
 				<span />
 			</div>
 			<div class="graffity-style max-w-sm">
-				<span class=' text-2xl'>Title</span>
+				<span class=" text-2xl">Title</span>
 			</div>
 			<div class="short-desc">
-				<span class=' text-2xl'>Short description</span>
+				<span class=" text-2xl">Short description</span>
 			</div>
 
-			<div class="description">
-				<span class=' text-2xl'>Description</span>
+			<div class="description max-w-md">
+				<span class=" text-2xl">Description</span>
 			</div>
 			<div class="redirect-link" />
 			<div class="hover-img" />
@@ -138,11 +138,13 @@
 
 		<a name="styles" />
 		{#each graffityStyles as style, i}
-			<li>
-				<div class="index">
-					<span class='font-dollar text-6xl'>{i + 1}</span>
+			<li
+				class="hover:delay-550 group transform border-b-2 border-neutral-700 hover:-translate-y-4 hover:border-yellow-400 hover:transition  hover:duration-1000 hover:ease-in-out hover:ease-in-out"
+			>
+				<div class="index group-hover:text-yellow-400 ">
+					<span class="font-dollar text-6xl">{i + 1}</span>
 				</div>
-				<div class="graffity-style max-w-sm">
+				<div class="graffity-style group-hover:text-yellow-400">
 					<h2 class="text-4xl" data-value={style.title}>{style.title}</h2>
 				</div>
 				<div class="short-desc">
@@ -153,7 +155,7 @@
 					{/each}
 				</div>
 
-				<div class="description w-auto lg:max-w-xl">
+				<div class="description  lg:max-w-3xl">
 					{#each style.desc as desc}
 						<p class="mb-1.5">
 							{desc}
@@ -186,7 +188,11 @@
 					</a>
 				</div>
 				<div class="hover-img">
-					<img src="/images/styles/{style.example}" alt='Example of a {style.title} style graffiti' class="img-fluid" />
+					<img
+						src="/images/styles/{style.example}"
+						alt="Example of a {style.title} style graffiti"
+						class="img-fluid"
+					/>
 				</div>
 			</li>
 		{/each}
@@ -262,7 +268,7 @@
 		margin: 0px -12px;
 		opacity: 0.4;
 	}
-	.graffity-list ul li::before,
+	/* .graffity-list ul li::before,
 	.graffity-list ul li::after {
 		content: '';
 		transition: all 1s;
@@ -274,7 +280,7 @@
 		height: 1px;
 		background: rgba(255, 255, 255, 0.5);
 		opacity: 0.5;
-	}
+	} */
 	.graffity-list ul li::after {
 		opacity: 1;
 		width: 0%;
@@ -289,17 +295,18 @@
 		padding: 0px 12px;
 	}
 	.graffity-list .index {
-		width: calc(100% / 12);
+		width: calc((100% / 12) / 1.2);
 	}
 	.graffity-list .short-desc {
-		width: calc((100% / 12) * 3);
+		width: calc((100% / 12) * 2.7);
 	}
 	.graffity-list .graffity-style {
-		width: calc((100% / 12) * 1);
+		width: calc((100% / 12) * 1.8);
 	}
 	.graffity-list .description {
-		width: calc((100% / 12) * 6);
+		/* width: calc((100% / 12) *10); */
 		/* width: 100%; */
+		width: 100%;
 	}
 	.graffity-list .redirect-link {
 		/* width: auto; */
@@ -325,11 +332,11 @@
 		position: absolute;
 		z-index: -1;
 		/* top: 50%; */
-		top: 30%;
+		top: 50%;
 		left: 0%;
 		width: 50vw;
 		/** 34vw; */
-		height: 34vw;
+		height: 20vw;
 	}
 	.graffity-list .hover-img img {
 		transition: all 0.7s;
@@ -341,7 +348,7 @@
 		border-radius: 16px;
 	}
 	.graffity-list li:hover .hover-img img {
-		opacity: 0.7;
+		opacity: 0.4;
 	}
 
 	.spray {
@@ -356,14 +363,10 @@
 	}
 
 	@media (min-width: 1200px) and (max-width: 1499px) {
-		/* h1 {
-			font-size: 90px;
-			line-height: 110px;
-		} */
 	}
 
 	@media (min-width: 992px) and (max-width: 1199px) {
-		h1 {
+		h2 {
 			font-size: 70px;
 			line-height: 90px;
 		}
