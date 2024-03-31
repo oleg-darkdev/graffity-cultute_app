@@ -19,6 +19,10 @@
 			title: 'SHOP',
 			link: '/cart'
 		},
+    {
+			title: 'F.A.Q.',
+			link: '#faq'
+		},
 		{
 			title: 'CONTACT',
 			link: '#contact'
