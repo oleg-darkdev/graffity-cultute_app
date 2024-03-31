@@ -116,7 +116,7 @@
 
 <!-- https://graffstorm.com/graffiti-styles -->
 <div class="graffity-list">
-	<h2 class="font-graffity title max-w-xl lg:text-6xl">Types of Graffiti That Define the Art</h2>
+	<h2 class="title max-w-xl lg:text-6xl">Types of Graffiti That Define the Art</h2>
 	<ul>
 		<li>
 			<div class="index">
