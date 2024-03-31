@@ -1,21 +1,48 @@
+<script>
+	const socialLinks = [
+		{
+			title: 'Instagram',
+			link: '',
+			img: 'instagram.png'
+		},
+		{
+			title: 'Facebook',
+			link: '',
+			img: 'facebook.png'
+		}
+	];
+</script>
+
 <!-- border-b border-gray-200 -->
 <div
-	class="hover:delay-550 group  border-2 border-neutral-900 py-4 px-8 hover:-translate-y-1 hover:scale-105 hover:border-yellow-400  hover:transition hover:duration-1000  hover:ease-in-out"
+	class="wrap hover:delay-550 group  border-2 border-neutral-900 py-4 px-8 hover:-translate-y-1 hover:scale-105 hover:border-yellow-400  hover:transition hover:duration-1000  hover:ease-in-out"
 >
 	<div class="mb-2 ">
 		<span class=" text-xs font-bold uppercase tracking-widest text-yellow-600">Author</span>
-
+		<a name="creator" />
 		<h2 class="mb-0 mt-2 text-4xl text-yellow-400">Oleg <br />Medvedev</h2>
-		<span>@oleg_darkdev</span>
+		<a href="https://www.linkedin.com/in/oleg-darkdev" class="underline" target="_blank"
+			>@oleg_darkdev</a
+		>
 	</div>
 
 	<div class="mb-1">
 		<div class="card0 card">
 			<div class="inside ">
 				<div class="icons">
-					<i class="fa fa-instagram h-20 w-20" aria-hidden="false" />
-					<i class="fa fa-twitter h-20 w-20" aria-hidden="true" />
-					<i class="fa fa-facebook" aria-hidden="true" />
+					{#each socialLinks as social}
+						<a
+							class="fa h-24 w-24 hover:-translate-y-1 hover:scale-110  hover:transition hover:duration-1000 hover:ease-in-out"
+							href={social.link}
+							target="_blank"
+						>
+							<img
+								src="/images/social/{social.img}"
+								class="h-full w-full"
+								alt="Llogotype of {social.title}"
+							/>
+						</a>
+					{/each}
 				</div>
 			</div>
 		</div>
@@ -32,7 +59,7 @@
 	}
 
 	.card {
-  		height: 450px;
+		height: 450px;
 		width: 320px;
 		background: #808080;
 		transition: background 0.8s;
@@ -48,12 +75,12 @@
 		background: url('/images/social/oleg_medvedev.png') center center no-repeat;
 		background-size: 350px;
 	}
-	.card0:hover {
+	.wrap:hover .card0 {
 		background: url('/images/social/oleg_medvedev.png') left center no-repeat;
 		background-size: 600px;
 	}
 
-	.card0:hover .fa {
+	.wrap:hover .fa {
 		opacity: 1;
 	}
 
@@ -63,8 +90,9 @@
 	}
 	.icons {
 		position: absolute;
-		fill: #fff;
-		color: #fff;
+		/* fill: #fff;
+		color: #fff; */
+		left: 7%;
 		height: 130px;
 		top: 226px;
 		width: 50px;
