@@ -2,7 +2,7 @@
 	const reliseData = [
 		{
 			title: 'release',
-			subTitle: 'Fall 2020'
+			subTitle: 'Fall 2025'
 		},
 
 		{
