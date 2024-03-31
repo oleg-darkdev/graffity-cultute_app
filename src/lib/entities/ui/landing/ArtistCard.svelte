@@ -11,7 +11,7 @@
 </script>
 
 <div
-	class="hover:delay-550 group my-6 h-auto border-2 border-neutral-900 hover:-translate-y-1 hover:scale-105 hover:border-yellow-400 hover:transition hover:duration-1000  hover:ease-in-out hover:ease-in-out"
+	class=" group my-6 h-auto border-2  border-neutral-900 hover:delay-550 hover:-translate-y-1 hover:scale-105 hover:border-yellow-400 hover:transition hover:duration-1000  hover:ease-in-out"
 >
 	<div class="container  max-w-md ">
 		<div
