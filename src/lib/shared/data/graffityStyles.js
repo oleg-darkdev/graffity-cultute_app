@@ -1,5 +1,4 @@
-// add Characters before mural
-
+// https://graffstorm.com/graffiti-styles
 const styles = [
 	// https://www.graffiti-empire.com/graffiti-tags-and-handstyles/
 	{
