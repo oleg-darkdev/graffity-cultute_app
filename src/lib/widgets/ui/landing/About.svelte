@@ -1,5 +1,24 @@
 <script>
 	import { ProfileCard, ReliseCard } from '$lib/entities';
+
+	const socialLinks = [
+		{
+			title: 'Instagram',
+			link: '',
+			img: 'instagram.png'
+		},
+		{
+			title: 'Facebook',
+			link: '',
+			img: 'facebook.png'
+		},
+
+		{
+			title: 'Youtube',
+			link: '',
+			img: 'youtube.png'
+		}
+	];
 </script>
 
 <div class=" mx-auto w-full px-5 pb-24 lg:px-32">
@@ -11,15 +30,20 @@
 				<ProfileCard />
 			</div>
 		</div>
-		<div class="prose-md prose mt-12 w-full w-full px-4 lg:px-0">
+
+		<!-- 	class="   py-4 px-8   "
+ -->
+		<div
+			class="hover:delay-550 prose-md group prose  mt-12 w-full w-full border-2  border-neutral-900 p-4  hover:-translate-y-1 hover:scale-105 hover:border-yellow-400 hover:bg-black hover:transition hover:duration-1000 hover:ease-in-out"
+		>
 			<div class="mb-5 border-b border-gray-200">
 				<div class="-mt-2 flex flex-wrap items-baseline">
-					<h5>12-03-2021</h5>
-					<p class="mt-1 ml-2">Transitions</p>
+					<!-- <h5>12-03-2021</h5> -->
+					<p class="mt-1 ml-2">About the boardgame: <span class='text-yellow-600 font-bold'>Graffity chronicles</span></p>
 				</div>
 			</div>
 			<a name="#about" />
-			<h1>Page transitions are a fundamental part of website navigation and user experience.</h1>
+			<h1>Lorem ipsum is placeholder text.</h1>
 			<p>Through the lens of a set of certitudes based on deductions founded on false premise.</p>
 			<p>
 				Turd polishing put a record on and see who dances, dog and pony show, nor one-sheet. Ensure
@@ -49,6 +73,27 @@
 				craft and build better nor low-hanging fruit the right info at the right time to the right
 				people.
 			</p>
+
+
+			<div class="mt-4 mb-8">
+				<span class="">More content on our social media:</span>
+
+				<div class="-mt-8  flex flex-row flex-wrap">
+					{#each socialLinks as social}
+						<a
+							class="h-32 w-32 hover:-translate-y-1 hover:scale-110  hover:transition hover:duration-1000 hover:ease-in-out"
+							href={social.link}
+							target="_blank"
+						>
+							<img
+								src="/images/social/{social.img}"
+								class="h-full w-full"
+								alt="Llogotype of {social.title}"
+							/>
+						</a>
+					{/each}
+				</div>
+			</div>
 		</div>
 	</div>
 </div>
