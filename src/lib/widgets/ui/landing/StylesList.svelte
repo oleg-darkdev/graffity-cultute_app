@@ -1,4 +1,6 @@
 <script>
+	import { ShowMoreDataBtn } from '$lib/shared';
+
 	import gsap from 'gsap';
 	import { graffityStyles } from '$lib/shared';
 
@@ -104,6 +106,8 @@
 		});
 		// });
 	});
+
+	let showFull = false;
 </script>
 
 <div class="spray" />
@@ -115,102 +119,103 @@
 </div>
 
 <!-- https://graffstorm.com/graffiti-styles -->
-<div class="graffity-list">
-	<h2 class="title max-w-xl lg:text-6xl">Types of Graffiti That Define the Art</h2>
-	<ul>
-		<li>
-			<div class="index">
-				<span />
-			</div>
-			<div class="graffity-style max-w-sm">
-				<span class=" text-2xl">Title</span>
-			</div>
-			<div class="short-desc">
-				<span class=" text-2xl">Short description</span>
-			</div>
-
-			<div class="description max-w-md">
-				<span class=" text-2xl">Description</span>
-			</div>
-			<div class="redirect-link" />
-			<div class="hover-img" />
-		</li>
-
-		<a name="styles" />
-		{#each graffityStyles as style, i}
-			<li
-				class="hover:delay-550 group transform border-b-2 border-neutral-700 hover:-translate-y-4 hover:border-yellow-400 hover:transition  hover:duration-1000 hover:ease-in-out hover:ease-in-out"
-			>
-				<div class="index group-hover:text-yellow-400 ">
-					<span class="font-dollar text-6xl">{i + 1}</span>
+<section class="mb-20 py-20">
+	<div class="graffity-list ">
+		<h2 class="title max-w-xl lg:text-6xl">Types of Graffiti That Define the Art</h2>
+		<ul>
+			<li>
+				<div class="index">
+					<span />
 				</div>
-				<div class="graffity-style group-hover:text-yellow-400">
-					<h2 class="text-4xl" data-value={style.title}>{style.title}</h2>
+				<div class="graffity-style max-w-sm">
+					<span class=" text-2xl">Title</span>
 				</div>
 				<div class="short-desc">
-					{#each style.shortDesc as desc}
-						<p>
-							{desc}
-						</p>
-					{/each}
+					<span class=" text-2xl">Short description</span>
 				</div>
 
-				<div class="description  lg:max-w-3xl">
-					{#each style.desc as desc}
-						<p class="mb-1.5">
-							{desc}
-						</p>
-					{/each}
+				<div class="description max-w-md">
+					<span class=" text-2xl">Description</span>
 				</div>
-				<div class="redirect-link">
-					<a href={style.articleLink} target="_blank">
-						<svg
-							width="1.25rem"
-							height="1.25rem"
-							viewBox="0 0 16 16"
-							fill="none"
-							name="iconArrow"
-							xmlns="http://www.w3.org/2000/svg"
-						>
-							<path
-								d="M12.75 4C12.75 3.58579 12.4142 3.25 12 3.25C11.5858 3.25 11.25 3.58579 11.25 4H12.75ZM11.25 10C11.25 10.4142 11.5858 10.75 12 10.75C12.4142 10.75 12.75 10.4142 12.75 10H11.25ZM11.25 4V10H12.75V4H11.25Z"
-								fill="currentColor"
-							/>
-							<path
-								d="M12 4.75C12.4142 4.75 12.75 4.41421 12.75 4C12.75 3.58579 12.4142 3.25 12 3.25L12 4.75ZM6 3.25C5.58579 3.25 5.25 3.58579 5.25 4C5.25 4.41421 5.58579 4.75 6 4.75L6 3.25ZM12 3.25L6 3.25L6 4.75L12 4.75L12 3.25Z"
-								fill="currentColor"
-							/>
-							<path
-								d="M12.5303 4.53033C12.8232 4.23744 12.8232 3.76256 12.5303 3.46967C12.2374 3.17678 11.7626 3.17678 11.4697 3.46967L12.5303 4.53033ZM3.46967 11.4697C3.17678 11.7626 3.17678 12.2374 3.46967 12.5303C3.76256 12.8232 4.23744 12.8232 4.53033 12.5303L3.46967 11.4697ZM11.4697 3.46967L3.46967 11.4697L4.53033 12.5303L12.5303 4.53033L11.4697 3.46967Z"
-								fill="currentColor"
-							/>
-						</svg>
-					</a>
-				</div>
-				<div class="hover-img">
-					<img
-						src="/images/styles/{style.example}"
-						alt="Example of a {style.title} style graffiti"
-						class="img-fluid"
-					/>
-				</div>
+				<div class="redirect-link" />
+				<div class="hover-img" />
 			</li>
-		{/each}
-	</ul>
-</div>
+
+			<a name="styles" />
+			{#each showFull ? graffityStyles : graffityStyles.slice(0, 3) as style, i}
+				<li
+					class="hover:delay-550 group transform border-b-2 border-neutral-700 hover:-translate-y-4 hover:border-yellow-400 hover:transition  hover:duration-1000 hover:ease-in-out hover:ease-in-out"
+				>
+					<div class="index group-hover:text-yellow-400 ">
+						<span class="font-dollar text-6xl">{i + 1}</span>
+					</div>
+					<div class="graffity-style group-hover:text-yellow-400">
+						<h2 class="text-4xl" data-value={style.title}>{style.title}</h2>
+					</div>
+					<div class="short-desc">
+						{#each style.shortDesc as desc}
+							<p>
+								{desc}
+							</p>
+						{/each}
+					</div>
+
+					<div class="description  lg:max-w-3xl">
+						{#each style.desc as desc}
+							<p class="mb-1.5">
+								{desc}
+							</p>
+						{/each}
+					</div>
+					<div class="redirect-link">
+						<a href={style.articleLink} target="_blank">
+							<svg
+								width="1.25rem"
+								height="1.25rem"
+								viewBox="0 0 16 16"
+								fill="none"
+								name="iconArrow"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<path
+									d="M12.75 4C12.75 3.58579 12.4142 3.25 12 3.25C11.5858 3.25 11.25 3.58579 11.25 4H12.75ZM11.25 10C11.25 10.4142 11.5858 10.75 12 10.75C12.4142 10.75 12.75 10.4142 12.75 10H11.25ZM11.25 4V10H12.75V4H11.25Z"
+									fill="currentColor"
+								/>
+								<path
+									d="M12 4.75C12.4142 4.75 12.75 4.41421 12.75 4C12.75 3.58579 12.4142 3.25 12 3.25L12 4.75ZM6 3.25C5.58579 3.25 5.25 3.58579 5.25 4C5.25 4.41421 5.58579 4.75 6 4.75L6 3.25ZM12 3.25L6 3.25L6 4.75L12 4.75L12 3.25Z"
+									fill="currentColor"
+								/>
+								<path
+									d="M12.5303 4.53033C12.8232 4.23744 12.8232 3.76256 12.5303 3.46967C12.2374 3.17678 11.7626 3.17678 11.4697 3.46967L12.5303 4.53033ZM3.46967 11.4697C3.17678 11.7626 3.17678 12.2374 3.46967 12.5303C3.76256 12.8232 4.23744 12.8232 4.53033 12.5303L3.46967 11.4697ZM11.4697 3.46967L3.46967 11.4697L4.53033 12.5303L12.5303 4.53033L11.4697 3.46967Z"
+									fill="currentColor"
+								/>
+							</svg>
+						</a>
+					</div>
+					<div class="hover-img">
+						<img
+							src="/images/styles/{style.example}"
+							alt="Example of a {style.title} style graffiti"
+							class="img-fluid"
+						/>
+					</div>
+				</li>
+			{/each}
+		</ul>
+	</div>
+
+	<div class="flex items-center justify-center">
+		<ShowMoreDataBtn bind:showFull link={'#styles'} title={'Styles'} />
+	</div>
+</section>
 
 <style>
-	:root {
-		--white-color: #fff;
-		--black-color: #000;
-	}
-
 	.img-fluid {
 		max-width: 100%;
 		height: auto;
 	}
 
-	a {
+	.graffity-list a {
 		transition: all 0.5s;
 		text-decoration: none;
 	}
@@ -322,10 +327,10 @@
 		align-items: center;
 		-webkit-align-items: center;
 		border-radius: 50%;
-		background: var(--white-color);
+		background: #fff;
 	}
 	.graffity-list .redirect-link svg {
-		color: var(--black-color);
+		color: #000;
 	}
 	.graffity-list .hover-img {
 		pointer-events: none;

@@ -1,16 +1,20 @@
 <script>
 	import { ArtistCard } from '$lib/entities';
-	import { extensions } from '$lib/shared';
+	import { extensions, ShowMoreDataBtn } from '$lib/shared';
+
+	let showFull = false;
 </script>
 
-<section class="flex min-h-screen w-full justify-center flex-col items-center pt-20">
+<section class="my-20 flex min-h-screen w-full flex-col items-center justify-center pb-20 ">
+	<h2 class="font-graffity title max-w-xl text-center lg:text-6xl">Artists by countries</h2>
+
 	<a name="artists" />
 
-	<h2 class="font-graffity title max-w-xl lg:text-6xl text-center">Artists by countries</h2>
-
 	<div class="flex  w-8/12 flex-row flex-wrap justify-between  ">
-		{#each extensions as extension}
+		{#each showFull ? extensions : extensions.slice(0, 4) as extension}
 			<ArtistCard {extension} />
 		{/each}
 	</div>
+
+	<ShowMoreDataBtn bind:showFull link={'#artists'} title={'Extensions'}/>
 </section>
