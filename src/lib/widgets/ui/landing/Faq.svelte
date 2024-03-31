@@ -10,6 +10,7 @@
 			Here are some of the frequently asked questions
 		</p>
 		<div class="mt-12 space-y-12 px-2 xl:px-16">
+      <a name="#faq"></a>
 			{#each faqData as faq}
 				<div class="mt-4 flex">
 					<div>
