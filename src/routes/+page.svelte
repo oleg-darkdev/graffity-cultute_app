@@ -1,9 +1,17 @@
 <script>
-	import { StylesList, Hero, Faq, ArtistsSection, VerticalSlider, About } from '$lib/widgets';
+	import {
+		StylesList,
+		Hero,
+		Faq,
+		ArtistsSection,
+		VerticalSlider,
+		About,
+		AntySystemsProject
+	} from '$lib/widgets';
 </script>
 
 <svelte:head>
-	<title>Graffity wars boardgame</title>
+	<title>Graffity chronicles boardgame</title>
 </svelte:head>
 
 <Hero />
@@ -17,6 +25,9 @@
 
 	<VerticalSlider />
 </section>
+
 <ArtistsSection />
+
+<AntySystemsProject />
 
 <Faq />
