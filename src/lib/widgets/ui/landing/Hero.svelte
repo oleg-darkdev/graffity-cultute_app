@@ -9,23 +9,26 @@
 	const links = [
 		{
 			title: 'ABOUT',
-			link: '#about'
+			link: '/'
+      // about
 		},
 		{
 			title: 'APPLICATION',
-			link: '/app'
+			link: '/'
 		},
 		{
 			title: 'SHOP',
-			link: '/cart'
+			link: '/'
 		},
     {
 			title: 'F.A.Q.',
-			link: '#faq'
+			link: '/'
+      // faq
 		},
 		{
 			title: 'CONTACT',
-			link: '#contact'
+			link: ''
+      // contact
 		}
 	];
 </script>
@@ -43,12 +46,12 @@
 		<ul>
 			{#each links as link}
 				<li>
-					<a href="#{link.link}" class="font-graffity text-4xl"> {link.title} </a>
+					<a href="{link.link}" class="font-graffity text-4xl"> {link.title} </a>
 				</li>
 			{/each}
 
 			<li>
-				<a href="#" class="cta"> Subscribe </a>
+				<a href="/" class="cta"> Subscribe </a>
 			</li>
 		</ul>
 	</nav>
@@ -57,7 +60,8 @@
 			<ul class="panels">
 				{#each panels as panel}
 					<li class="panel">
-						<a href="#{panel.link}">
+            <!-- #{panel.link} -->
+						<a href="/">
 							<span class="font-graffity">
 								{panel.title}
 

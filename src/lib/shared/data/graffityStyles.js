@@ -4,7 +4,7 @@ const styles = [
 	{
 		title: 'Tags',
 		example: 'tags.jpg',
-		articleLink: '/tags',
+		articleLink: '/',
 		shortDesc: ['A tag can be defined as a stylised signature of the graffiti artist’s name.'],
 		desc: [
 			'The most common tools for graffiti tags include spray paint and marker pens.',
