@@ -103,6 +103,14 @@
 		overflow: hidden;
 	}
 
+	@media (max-width: 560px) {
+		.wrapper {
+			width: 350px;
+			overflow: hidden;
+      /* margin: auto; */
+		}
+	}
+
 	.overviewInfo,
 	.productSpecifications {
 		padding: 24px;

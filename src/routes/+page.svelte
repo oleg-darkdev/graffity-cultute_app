@@ -20,11 +20,8 @@
 
 <StylesList />
 
-<section class="min-h-screen w-full ">
-	<h2 class="mt-20 mb-6 w-full text-center lg:text-6xl">Very useful app</h2>
 
 	<VerticalSlider />
-</section>
 
 <ArtistsSection />
 

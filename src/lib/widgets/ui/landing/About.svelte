@@ -21,8 +21,8 @@
 	];
 </script>
 
-<div class=" mx-auto w-full px-5 pb-24 lg:px-32">
-	<div class="mx-auto flex max-w-5xl flex-col lg:flex-row">
+<div class=" mx-auto w-full px-5 lg:pb-24 xl:pb-24 lg:px-32">
+	<div class="mx-auto flex max-w-5xl flex-col-reverse lg:flex-row">
 		<div class=" m-auto mt-12 w-full max-w-sm ">
 			<div class="flex w-full flex-col">
 				<ReliseCard />

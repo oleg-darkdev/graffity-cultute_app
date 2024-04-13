@@ -119,9 +119,9 @@
 </div>
 
 <!-- https://graffstorm.com/graffiti-styles -->
-<section class="mb-20 py-20">
+<section class="mb-20 md:py-20 lg:py-20 xl:py-20">
 	<div class="graffity-list ">
-		<h2 class="title max-w-xl lg:text-6xl">Types of Graffiti That Define the Art</h2>
+		<h2 class="title max-w-xl text-3xl lg:text-6xl">Types of Graffiti That Define the Art</h2>
 		<ul>
 			<li>
 				<div class="index">
@@ -150,7 +150,9 @@
 						<span class="font-dollar text-6xl">{i + 1}</span>
 					</div>
 					<div class="graffity-style group-hover:text-yellow-400">
-						<h2 class="text-4xl" data-value={style.title}>{style.title}</h2>
+						<h2 class="text-xl md:text-4xl lg:text-4xl xl:text-4xl" data-value={style.title}>
+							{style.title}
+						</h2>
 					</div>
 					<div class="short-desc">
 						{#each style.shortDesc as desc}
@@ -415,6 +417,15 @@
 		.graffity-list .description {
 			display: none;
 		}
+		@media (max-width: 560px) {
+			.graffity-list .graffity-style {
+				width: calc((100% / 12) * 4);
+			}
+			.graffity-list .redirect-link {
+				width: calc((100% / 12) * 2);
+			}
+		}
+
 		.graffity-list .graffity-style {
 			width: calc((100% / 12) * 8);
 		}

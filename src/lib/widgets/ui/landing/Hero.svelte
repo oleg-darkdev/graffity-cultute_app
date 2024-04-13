@@ -10,7 +10,7 @@
 		{
 			title: 'ABOUT',
 			link: '/'
-      // about
+			// about
 		},
 		{
 			title: 'APPLICATION',
@@ -20,19 +20,19 @@
 			title: 'SHOP',
 			link: '/'
 		},
-    {
+		{
 			title: 'F.A.Q.',
 			link: '/'
-      // faq
+			// faq
 		},
 		{
 			title: 'CONTACT',
 			link: ''
-      // contact
+			// contact
 		}
 	];
 </script>
-
+<!-- lg:min-h-screen xl:min-h-screen md:min-h-screen -->
 <section class="min-h-screen">
 	<nav class="w-full ">
 		<ul>
@@ -46,21 +46,23 @@
 		<ul>
 			{#each links as link}
 				<li>
-					<a href="{link.link}" class="font-graffity text-4xl"> {link.title} </a>
+					<a href={link.link} class="font-graffity text-md md:text-3xl lg:text-4xl">
+						{link.title}
+					</a>
 				</li>
 			{/each}
 
-			<li>
+			<!-- <li>
 				<a href="/" class="cta"> Subscribe </a>
-			</li>
+			</li> -->
 		</ul>
 	</nav>
 	<div class="">
 		<article>
 			<ul class="panels">
 				{#each panels as panel}
-					<li class="panel">
-            <!-- #{panel.link} -->
+					<li class="panel max-w-md lg:w-full">
+						<!-- #{panel.link} -->
 						<a href="/">
 							<span class="font-graffity">
 								{panel.title}
@@ -68,12 +70,12 @@
 								<!-- {panel.icon} -->
 							</span>
 						</a>
-						<img src="/images/hero/{panel.img}" alt={panel.title} />
+						<img src="/images/hero/{panel.img}" class="h-full w-full" alt={panel.title} />
 					</li>
 				{/each}
 			</ul>
 
-			<h2>
+			<h2 class="big-text">
 				<span class="gradient-text letter">E</span>
 				<span class="gradient-text letter">X</span>
 				<span class="gradient-text letter">P</span>
@@ -270,6 +272,55 @@
 		z-index: var(--z-20);
 	}
 
+	@media (max-width: 560px) {
+		.panels {
+			display: flex;
+			flex-direction: column;
+		}
+		.panel {
+			height: 120px;
+		}
+
+		.big-text {
+			/* display: none; */
+			font-size: 4rem;
+			/* line-height: 0.75; */
+			margin: 0 auto -4rem auto;
+		}
+		.geo-square img {
+			-webkit-animation: scale-in-ver-center var(--duration) cubic-bezier(0.25, 0.46, 0.45, 0.94)
+					forwards,
+				slit-out-vertical 1s ease-in forwards;
+			animation: scale-in-ver-center var(--duration) cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards,
+				slit-out-vertical 1s ease-in forwards;
+			-webkit-animation-delay: 2s, 4.5s;
+			animation-delay: 2s, 4.5s;
+			opacity: 0;
+			/* height: 200px; */
+      width: 350px;
+			transform: scale(1.75);
+		}
+		.geo-square {
+			align-self: center;
+		-webkit-animation: scale-in-hor-center var(--duration) cubic-bezier(0.25, 0.46, 0.45, 0.94)
+				forwards,
+			scale-out-hor-left var(--duration) cubic-bezier(0.55, 0.085, 0.68, 0.53) forwards;
+		animation: scale-in-hor-center var(--duration) cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards,
+			scale-out-hor-left var(--duration) cubic-bezier(0.55, 0.085, 0.68, 0.53) forwards;
+		-webkit-animation-delay: 1.5s, 5.5s;
+		animation-delay: 1.5s, 5.5s;
+		box-shadow: 0 0 0 var(--default-padding) var(--yellow);
+		display: grid;
+			height: calc(var(--default-padding) * 12);
+			margin: 0 auto calc(var(--default-padding) * 4);
+			opacity: 0;
+		position: relative;
+		transition: color var(--duration);
+			width: 350px;
+			z-index: var(--z-30);
+		}
+	}
+
 	.panel {
 		-webkit-animation: scale-in-ver-center var(--duration) cubic-bezier(0.25, 0.46, 0.45, 0.94)
 			forwards;
@@ -289,7 +340,7 @@
 	}
 	.panel img {
 		filter: brightness(0.33);
-		height: var(--full-h);
+		/* height: var(--full-h); */
 	}
 	.panel span {
 		align-items: center;
@@ -433,36 +484,39 @@
 		animation-delay: 7.05s;
 	}
 
-	.geo-square {
-		align-self: center;
-		-webkit-animation: scale-in-hor-center var(--duration) cubic-bezier(0.25, 0.46, 0.45, 0.94)
-				forwards,
-			scale-out-hor-left var(--duration) cubic-bezier(0.55, 0.085, 0.68, 0.53) forwards;
-		animation: scale-in-hor-center var(--duration) cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards,
-			scale-out-hor-left var(--duration) cubic-bezier(0.55, 0.085, 0.68, 0.53) forwards;
-		-webkit-animation-delay: 1.5s, 5.5s;
-		animation-delay: 1.5s, 5.5s;
-		box-shadow: 0 0 0 var(--default-padding) var(--yellow);
-		display: grid;
-		height: calc(var(--default-padding) * 16);
-		margin: 0 auto calc(var(--default-padding) * 4);
-		opacity: 0;
-		position: relative;
-		transition: color var(--duration);
-		width: calc(var(--default-padding) * 30);
-		z-index: var(--z-30);
-	}
-	.geo-square img {
-		-webkit-animation: scale-in-ver-center var(--duration) cubic-bezier(0.25, 0.46, 0.45, 0.94)
-				forwards,
-			slit-out-vertical 1s ease-in forwards;
-		animation: scale-in-ver-center var(--duration) cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards,
-			slit-out-vertical 1s ease-in forwards;
-		-webkit-animation-delay: 2s, 4.5s;
-		animation-delay: 2s, 4.5s;
-		opacity: 0;
-		height: var(--full-h);
-		transform: scale(1.75);
+	@media (min-width: 560px) {
+		.geo-square {
+			align-self: center;
+			-webkit-animation: scale-in-hor-center var(--duration) cubic-bezier(0.25, 0.46, 0.45, 0.94)
+					forwards,
+				scale-out-hor-left var(--duration) cubic-bezier(0.55, 0.085, 0.68, 0.53) forwards;
+			animation: scale-in-hor-center var(--duration) cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards,
+				scale-out-hor-left var(--duration) cubic-bezier(0.55, 0.085, 0.68, 0.53) forwards;
+			-webkit-animation-delay: 1.5s, 5.5s;
+			animation-delay: 1.5s, 5.5s;
+			box-shadow: 0 0 0 var(--default-padding) var(--yellow);
+			display: grid;
+			height: calc(var(--default-padding) * 16);
+			margin: 0 auto calc(var(--default-padding) * 4);
+			opacity: 0;
+			position: relative;
+			transition: color var(--duration);
+			width: calc(var(--default-padding) * 30);
+			z-index: var(--z-30);
+		}
+
+		.geo-square img {
+			-webkit-animation: scale-in-ver-center var(--duration) cubic-bezier(0.25, 0.46, 0.45, 0.94)
+					forwards,
+				slit-out-vertical 1s ease-in forwards;
+			animation: scale-in-ver-center var(--duration) cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards,
+				slit-out-vertical 1s ease-in forwards;
+			-webkit-animation-delay: 2s, 4.5s;
+			animation-delay: 2s, 4.5s;
+			opacity: 0;
+			height: var(--full-h);
+			transform: scale(1.75);
+		}
 	}
 
 	@media only screen and (min-width: 760px) {

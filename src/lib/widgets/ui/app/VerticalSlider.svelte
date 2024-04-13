@@ -106,48 +106,58 @@
 	];
 </script>
 
+<section class="slider-wrap min-h-screen w-full ">
+	<h2 class="mt-20 mb-6 w-full text-center lg:text-6xl">Very useful app</h2>
 
-<div class="container mb-20 flex h-full w-full flex-col">
-	<a name="#app" />
-	<div class="h-screen">
-		<div class="sidebar   h-full w-full">
-			{#each slides as slide}
-				<div class="prose h-full px-6 pt-8 text-left">
-					<h3 class="text-left text-4xl">{slide.title}</h3>
-					<div class="mb-2 w-full border-b border-gray-200">
-						<div class="-mt-2 flex flex-wrap items-baseline">
-							<span class="text-left ">{slide.subTitle}</span>
-							<p class="mt-0 -mb-2 ml-2">Transitions</p>
+	<div class=" container mb-20 flex h-full w-full flex-col">
+		<a name="#app" />
+		<div class="h-screen ">
+			<div class="sidebar   h-full w-full">
+				{#each slides as slide}
+					<div class="prose h-full px-6 pt-8 text-left">
+						<h3 class="text-left text-4xl">{slide.title}</h3>
+						<div class="mb-2 w-full border-b border-gray-200">
+							<div class="-mt-2 flex flex-wrap items-baseline">
+								<span class="text-left ">{slide.subTitle}</span>
+								<p class="mt-0 -mb-2 ml-2">Transitions</p>
+							</div>
 						</div>
+						{#each slide.desc as desc}
+							<p class="-mb-4">{desc}</p>
+						{/each}
 					</div>
-					{#each slide.desc as desc}
-						<p class="-mb-4">{desc}</p>
-					{/each}
-				</div>
-			{/each}
-		</div>
-		<div class="main-slide h-full w-full">
-			{#each slides as slide}
-				<div
-					class="hover:delay-550 w-full hover:-translate-y-1 hover:scale-105  hover:transition hover:duration-1000  hover:ease-in-out "
-					style="
+				{/each}
+			</div>
+			<div class="main-slide h-full w-full">
+				{#each slides as slide}
+					<div
+						class="hover:delay-550 w-full hover:-translate-y-1 hover:scale-105  hover:transition hover:duration-1000  hover:ease-in-out "
+						style="
             background-image: url({slide.img});
           "
-				/>
-			{/each}
-		</div>
-		<div class="controls">
-			<button class="down-button bg-white">
-				<i class="fas fa-arrow-down" />
-			</button>
-			<button class="up-button bg-white">
-				<i class="fas fa-arrow-up" />
-			</button>
+					/>
+				{/each}
+			</div>
+			<div class="controls">
+				<button class="down-button bg-white">
+					<i class="fas fa-arrow-down" />
+				</button>
+				<button class="up-button bg-white">
+					<i class="fas fa-arrow-up" />
+				</button>
+			</div>
 		</div>
 	</div>
-</div>
+</section>
+
 
 <style>
+	@media (max-width: 560px) {
+		.slider-wrap {
+			display: none;
+		}
+	}
+
 	.container {
 		position: relative;
 		overflow: hidden;
