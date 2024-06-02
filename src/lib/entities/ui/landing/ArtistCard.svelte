@@ -99,7 +99,7 @@
 
 <style>
 	.wrapper {
-		width: 450px;
+		width: 400px;
 		overflow: hidden;
 	}
 
