@@ -57,7 +57,7 @@
 			</li> -->
 		</ul>
 	</nav>
-	<div class="">
+	<!-- <div class=""> -->
 		<article>
 			<ul class="panels">
 				{#each panels as panel}
@@ -89,7 +89,7 @@
 				<img src="/images/gifs/your_welcome.gif" alt="image of graffity, graphic purpose only" />
 			</span>
 		</article>
-	</div>
+	<!-- </div> -->
 </section>
 
 <!-- All icons from freepik-->
