@@ -18,13 +18,13 @@
 					anti-systemic movements and cultures that have resulted from state systems.
 				</p>
 				<span class="mb-6">
-					<ins>Creation of</ins> <a class="text-yellow-400 underline" href="">44Games</a>, by
+					<ins>Creation of</ins> <a class="text-yellow-400 underline" target='_blank' href="https://44games.vercel.app/">44Games</a>, by
 					<a class="text-yellow-400 underline" href="#creator">Oleg Medvedev</a>
 				</span>
 				<a
-					href="#"
+					href="https://anti-system.vercel.app/"
 					class="text-tellow-500  inline-flex items-center font-semibold hover:text-yellow-400 md:mb-2 lg:mb-0"
-					title="read more"
+					title="read more" target='_blank'
 				>
 					Learn More about antisystems boardgames
 					<svg
