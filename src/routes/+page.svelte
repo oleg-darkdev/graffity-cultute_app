@@ -20,8 +20,7 @@
 
 <StylesList />
 
-
-	<VerticalSlider />
+<VerticalSlider />
 
 <ArtistsSection />
 
