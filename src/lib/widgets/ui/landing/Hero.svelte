@@ -5,38 +5,9 @@
 		{ title: 'Pieces', img: 'pieces.jpg', icon: '', link: 'pieces' },
 		{ title: 'Slang', img: 'slang.jpg', icon: '', link: 'slang' }
 	];
+	import { links } from '$lib/shared';
 
-	const links = [
-		{
-			title: 'ABOUT',
-			link: '/about'
-			// about
-		},
-		{
-			title: 'Extensions',
-			link: '#extensions'
-		},
-		// {
-		// 	title: 'SHOP',
-		// 	link: '/'
-		// },
-		{
-			title: 'F.A.Q.',
-			link: '#faq'
-			// faq
-		},
-
-		{
-			title: 'CONTACT',
-			link: '#contact'
-			//
-		}
-
-		// {
-		// 	title: 'APP',
-		// 	link: '/app'
-		// },
-	];
+	
 </script>
 
 <!-- lg:min-h-screen xl:min-h-screen md:min-h-screen -->
