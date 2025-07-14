@@ -9,32 +9,39 @@
 	const links = [
 		{
 			title: 'ABOUT',
-			link: '/'
+			link: '/about'
 			// about
 		},
 		{
-			title: 'APPLICATION',
-			link: '/'
+			title: 'Extensions',
+			link: '#extensions'
 		},
-		{
-			title: 'SHOP',
-			link: '/'
-		},
+		// {
+		// 	title: 'SHOP',
+		// 	link: '/'
+		// },
 		{
 			title: 'F.A.Q.',
-			link: '/'
+			link: '#faq'
 			// faq
 		},
+
 		{
 			title: 'CONTACT',
-			link: ''
-			// contact
+			link: '#contact'
+			//
 		}
+
+		// {
+		// 	title: 'APP',
+		// 	link: '/app'
+		// },
 	];
 </script>
+
 <!-- lg:min-h-screen xl:min-h-screen md:min-h-screen -->
 <section class="min-h-screen">
-	<nav class="w-full ">
+	<nav class="w-full">
 		<ul>
 			<li>
 				<a href="/" class="link">
@@ -46,49 +53,49 @@
 		<ul>
 			{#each links as link}
 				<li>
-					<a href={link.link} class="font-graffity text-md md:text-3xl lg:text-4xl">
+					<a href={link.link} class="font-graffity text-md hidden-sm md:text-3xl lg:text-4xl">
 						{link.title}
 					</a>
 				</li>
 			{/each}
 
-			<!-- <li>
-				<a href="/" class="cta"> Subscribe </a>
-			</li> -->
+			<li class="bg-yellow-500 p-4 text-black">
+				<a href="/" target="_blank" class="font-graffity text-md md:text-3xl lg:text-4xl"> App </a>
+			</li>
 		</ul>
 	</nav>
 	<!-- <div class=""> -->
-		<article>
-			<ul class="panels">
-				{#each panels as panel}
-					<li class="panel max-w-md lg:w-full">
-						<!-- #{panel.link} -->
-						<a href="/">
-							<span class="font-graffity">
-								{panel.title}
+	<article>
+		<ul class="panels">
+			{#each panels as panel}
+				<li class="panel max-w-md lg:w-full">
+					<!-- #{panel.link} -->
+					<a href="/">
+						<span class="font-graffity">
+							{panel.title}
 
-								<!-- {panel.icon} -->
-							</span>
-						</a>
-						<img src="/images/hero/{panel.img}" class="h-full w-full" alt={panel.title} />
-					</li>
-				{/each}
-			</ul>
+							<!-- {panel.icon} -->
+						</span>
+					</a>
+					<img src="/images/hero/{panel.img}" class="h-full w-full" alt={panel.title} />
+				</li>
+			{/each}
+		</ul>
 
-			<h2 class="big-text">
-				<span class="gradient-text letter">E</span>
-				<span class="gradient-text letter">X</span>
-				<span class="gradient-text letter">P</span>
-				<span class="gradient-text letter">L</span>
-				<span class="gradient-text letter">O</span>
-				<span class="gradient-text letter">R</span>
-				<span class="gradient-text letter">E</span>
-			</h2>
-
-			<span class="geo-square">
-				<img src="/images/gifs/your_welcome.gif" alt="image of graffity, graphic purpose only" />
-			</span>
-		</article>
+		<h2 class="big-text">
+			<span class="gradient-text letter">E</span>
+			<span class="gradient-text letter">X</span>
+			<span class="gradient-text letter">P</span>
+			<span class="gradient-text letter">L</span>
+			<span class="gradient-text letter">O</span>
+			<span class="gradient-text letter">R</span>
+			<span class="gradient-text letter">E</span>
+		</h2>
+		
+		<span class="geo-square">
+			<img src="/images/gifs/your_welcome.gif" alt="image of graffity, graphic purpose only" />
+		</span>
+	</article>
 	<!-- </div> -->
 </section>
 
@@ -297,25 +304,25 @@
 			animation-delay: 2s, 4.5s;
 			opacity: 0;
 			/* height: 200px; */
-      width: 350px;
+			width: 350px;
 			transform: scale(1.75);
 		}
 		.geo-square {
 			align-self: center;
-		-webkit-animation: scale-in-hor-center var(--duration) cubic-bezier(0.25, 0.46, 0.45, 0.94)
-				forwards,
-			scale-out-hor-left var(--duration) cubic-bezier(0.55, 0.085, 0.68, 0.53) forwards;
-		animation: scale-in-hor-center var(--duration) cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards,
-			scale-out-hor-left var(--duration) cubic-bezier(0.55, 0.085, 0.68, 0.53) forwards;
-		-webkit-animation-delay: 1.5s, 5.5s;
-		animation-delay: 1.5s, 5.5s;
-		box-shadow: 0 0 0 var(--default-padding) var(--yellow);
-		display: grid;
+			-webkit-animation: scale-in-hor-center var(--duration) cubic-bezier(0.25, 0.46, 0.45, 0.94)
+					forwards,
+				scale-out-hor-left var(--duration) cubic-bezier(0.55, 0.085, 0.68, 0.53) forwards;
+			animation: scale-in-hor-center var(--duration) cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards,
+				scale-out-hor-left var(--duration) cubic-bezier(0.55, 0.085, 0.68, 0.53) forwards;
+			-webkit-animation-delay: 1.5s, 5.5s;
+			animation-delay: 1.5s, 5.5s;
+			box-shadow: 0 0 0 var(--default-padding) var(--yellow);
+			display: grid;
 			height: calc(var(--default-padding) * 12);
 			margin: 0 auto calc(var(--default-padding) * 4);
 			opacity: 0;
-		position: relative;
-		transition: color var(--duration);
+			position: relative;
+			transition: color var(--duration);
 			width: 350px;
 			z-index: var(--z-30);
 		}

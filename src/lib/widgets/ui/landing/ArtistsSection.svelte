@@ -11,6 +11,7 @@
 	</h2>
 
 	<a name="artists" />
+	<a name="extensions" />
 
 	<div class="flex  lg:w-10/12 xl:w-10/12 w-full  flex-row flex-wrap lg:justify-between xl:justify-between justify-center   ">
 		{#each showFull ? extensions : extensions.slice(0, 6) as extension}

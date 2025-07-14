@@ -34,7 +34,7 @@
 					<span>PRICE</span>
 
 					<h3 class="font-dollar -mt-2 text-3xl group-hover:text-yellow-400 ">
-						$ <span class="font-graffity">50</span>
+						$ <span class="font-graffity">70</span>
 					</h3>
 				</div>
 
@@ -48,10 +48,9 @@
 		<div
 			class="productSpecifications group-hover:bg-yellow-400  group-hover:transition  group-hover:duration-1000   group-hover:ease-in-out"
 		>
-			<h1 class="mt-10 text-2xl group-hover:text-black">Lorem ipsum dolor</h1>
+			<h1 class="mt-10 text-2xl group-hover:text-black">Beta phase.</h1>
 			<p class="group-hover:text-black">
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-				labore et dolore magna aliqua. Ut enim ad minim veniam.
+				The boardgame and app are in development. 
 			</p>
 
 			<div
@@ -61,8 +60,8 @@
 					<p class="font-dollar mr-4 text-4xl group-hover:text-yellow-400">
 						$ <span class="font-graffity group-hover:text-yellow-400">50</span>
 					</p>
-
-					<span class="font-graffity text-3xl">Pre-order now</span>
+<!-- Pre-order now -->
+					<span class="font-graffity text-3xl">Early bird</span>
 				</button>
 			</div>
 		</div>

@@ -2,14 +2,15 @@
 	const socialLinks = [
 		{
 			title: 'Instagram',
-			link: '',
+			link: 'https://www.instagram.com/',
 			img: 'instagram.png'
 		},
 		{
 			title: 'Facebook',
-			link: '',
+			link: 'https://www.facebook.com/l.pl/',
 			img: 'facebook.png'
-		}
+		},
+
 	];
 </script>
 
@@ -26,6 +27,7 @@
 		>
 	</div>
 
+	<a name="contact"></a>
 	<div class="mb-1">
 		<div class="card0 card">
 			<div class="inside ">
