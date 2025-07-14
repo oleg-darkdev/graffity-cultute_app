@@ -20,7 +20,7 @@
 
 <StylesList />
 
-<VerticalSlider />
+<!-- <VerticalSlider /> -->
 
 <ArtistsSection />
 
