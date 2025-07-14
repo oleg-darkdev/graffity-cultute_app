@@ -91,7 +91,7 @@
 			<span class="gradient-text letter">R</span>
 			<span class="gradient-text letter">E</span>
 		</h2>
-		
+
 		<span class="geo-square">
 			<img src="/images/gifs/your_welcome.gif" alt="image of graffity, graphic purpose only" />
 		</span>
