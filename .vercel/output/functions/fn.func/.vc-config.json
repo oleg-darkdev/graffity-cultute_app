@@ -1,5 +1,8 @@
 {
 	"runtime": "edge",
-	"envVarsInUse": [],
-	"entrypoint": "index.js"
+	"entrypoint": "index.js",
+	"framework": {
+		"slug": "sveltekit",
+		"version": "2.7.3"
+	}
 }
