@@ -6,13 +6,17 @@
 		ArtistsSection,
 		VerticalSlider,
 		About,
-		AntySystemsProject
+		AntySystemsProject,
+		Header,
+		Footer
 	} from '$lib/widgets';
 </script>
 
 <svelte:head>
 	<title>Graffity chronicles boardgame</title>
 </svelte:head>
+
+<Header />
 
 <Hero />
 
@@ -27,3 +31,5 @@
 <AntySystemsProject />
 
 <Faq />
+
+<Footer />

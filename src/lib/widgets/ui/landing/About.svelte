@@ -1,24 +1,7 @@
 <script>
-	import { ProfileCard, ReliseCard } from '$lib/entities';
-
-	const socialLinks = [
-		{
-			title: 'Instagram',
-			link: 'https://www.instagram.com/',
-			img: 'instagram.png'
-		},
-		{
-			title: 'Facebook',
-			link: 'https://www.facebook.com/l.pl/',
-			img: 'facebook.png'
-		},
-
-		{
-			title: 'Youtube',
-			link: 'https://www.youtube.com/',
-			img: 'youtube.png'
-		}
-	];
+	import { ProfileCard, ReliseCard } from '$entities';
+	import {socialLinks} from '$shared';
+	
 </script>
 
 <section class=" mx-auto w-full px-5 lg:px-32 lg:py-12 xl:py-12">
@@ -47,7 +30,7 @@
 				</div>
 			</div>
 			<a name="#about" />
-			<h1>Discover the world of street-art through a boardgame! </h1>
+			<h1>Discover the world of graffiti culture through a boardgame! </h1>
 			<p>
 				Graffiti Chronicles is a cooperative board game enhanced by an interactive <a
 					class="font-bold text-yellow-600 underline "

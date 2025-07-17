@@ -6,13 +6,11 @@
 		{ title: 'Slang', img: 'slang.jpg', icon: '', link: 'slang' }
 	];
 	import { links } from '$lib/shared';
-
-	
 </script>
 
 <!-- lg:min-h-screen xl:min-h-screen md:min-h-screen -->
-<section class="min-h-screen">
-	<nav class="w-full">
+<section class="min-h-screen w-full pt-20">
+	<!-- <nav class="w-full">
 		<ul>
 			<li>
 				<a href="/" class="link">
@@ -34,39 +32,51 @@
 				<a href="/" target="_blank" class="font-graffity text-md md:text-3xl lg:text-4xl"> App </a>
 			</li>
 		</ul>
-	</nav>
-	<!-- <div class=""> -->
-	<article>
-		<ul class="panels">
-			{#each panels as panel}
-				<li class="panel max-w-md lg:w-full">
-					<!-- #{panel.link} -->
-					<a href="/">
-						<span class="font-graffity">
-							{panel.title}
+	</nav> -->
+	<div
+		data-animation="default"
+		class="w-nav navbar"
+		data-easing2="ease"
+		data-easing="ease"
+		data-collapse="all"
+		role="banner"
+		data-duration="300"
+	>
+		<div class="display-grid w-full">
+			<!-- <div class=""> -->
+			<article class="w-full">
+				<ul class="panels">
+					{#each panels as panel}
+						<li class="panel max-w-md lg:w-full">
+							<!-- #{panel.link} -->
+							<a href="/">
+								<span style="z-index: 90;" class="font-graffity">
+									{panel.title}
 
-							<!-- {panel.icon} -->
-						</span>
-					</a>
-					<img src="/images/hero/{panel.img}" class="h-full w-full" alt={panel.title} />
-				</li>
-			{/each}
-		</ul>
+									<!-- {panel.icon} -->
+								</span>
+							</a>
+							<img src="/images/hero/{panel.img}" class="h-full w-full" alt={panel.title} />
+						</li>
+					{/each}
+				</ul>
 
-		<h2 class="big-text">
-			<span class="gradient-text letter">E</span>
-			<span class="gradient-text letter">X</span>
-			<span class="gradient-text letter">P</span>
-			<span class="gradient-text letter">L</span>
-			<span class="gradient-text letter">O</span>
-			<span class="gradient-text letter">R</span>
-			<span class="gradient-text letter">E</span>
-		</h2>
+				<h2 class="big-text">
+					<span class="gradient-text letter">E</span>
+					<span class="gradient-text letter">X</span>
+					<span class="gradient-text letter">P</span>
+					<span class="gradient-text letter">L</span>
+					<span class="gradient-text letter">O</span>
+					<span class="gradient-text letter">R</span>
+					<span class="gradient-text letter">E</span>
+				</h2>
 
-		<span class="geo-square">
-			<img src="/images/gifs/your_welcome.gif" alt="image of graffity, graphic purpose only" />
-		</span>
-	</article>
+				<span class="geo-square">
+					<img src="/images/gifs/your_welcome.gif" alt="image of graffity, graphic purpose only" />
+				</span>
+			</article>
+		</div>
+	</div>
 	<!-- </div> -->
 </section>
 

@@ -8,9 +8,9 @@
 	});
 </script>
 
-<main class="scrollbar-x-hide overflow-auto">
+<div class="scrollbar-x-hide overflow-auto ">
 	<slot />
-</main>
+</div>
 
 <style>
 	:global(h1, h2, h3, h4, h5, h6, .font-graffity) {
