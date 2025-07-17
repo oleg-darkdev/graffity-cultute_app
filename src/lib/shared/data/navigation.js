@@ -1,7 +1,7 @@
 const links = [
 	{
 		title: 'ABOUT',
-		link: '/about'
+		link: '#about'
 		// about
 	},
 	{
@@ -22,7 +22,7 @@ const links = [
 		title: 'CONTACT',
 		link: '#contact'
 		//
-	}
+	},
 
 	// {
 	// 	title: 'APP',
